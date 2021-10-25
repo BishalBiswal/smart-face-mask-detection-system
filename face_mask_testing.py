@@ -8,7 +8,7 @@ import time
 from selenium import webdriver
 
 from selenium import webdriver
-cd = 'C:\\Users\\Bishal\\Documents\\isb\\ml and iot\\Chromedriver.exe'
+cd = 'C:\\Users\\Bishal\\Documents\\ml and iot\\Chromedriver.exe'
 driver = webdriver.Chrome(cd)
 email = "yuyguy721@gmail.com"
 password = "621311Hi5"
@@ -36,17 +36,13 @@ driver.find_element_by_xpath('//*[@id="SIMULATION_ID"]/div[2]').click()
 time.sleep(3)
 driver.find_element_by_xpath('//*[@id="SERIAL_MONITOR_ID"]/div[2]').click()
 time.sleep(2)
-# Model reconstruction from JSON file
+
 with open("C:\\Users\\Bishal\\model_architecture_FaceMask_Detection.json") as f:
     model = model_from_json(f.read())
 
-# Load weights into the new model
+
 model.load_weights(r"C:\Users\Bishal\FaceMask_Detection.h5")
 
-# model.summary()
-
-
-# Model testing
 
 label = {0: "With Mask", 1: "Without Mask"}
 color_label = {0: (0, 255, 0), 1: (0, 0, 255)}
