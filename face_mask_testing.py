@@ -11,7 +11,7 @@ from selenium import webdriver
 cd = 'C:\\Users\\Bishal\\Documents\\ml and iot\\Chromedriver.exe'
 driver = webdriver.Chrome(cd)
 email = "yuyguy721@gmail.com"
-password = "621311Hi5"
+password = "passwd"
 driver.get("https://www.tinkercad.com/dashboard")
 time.sleep(2)
 mail = driver.find_element_by_xpath(
